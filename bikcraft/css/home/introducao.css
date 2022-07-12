@@ -1,0 +1,63 @@
+.introducao-bg {
+  background: var(--cor-12) url("../../img/decorador/bottom-left.svg") no-repeat bottom 160px left 20px;
+  box-shadow: inset 0 -120px white;
+}
+
+.introducao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 40px;
+}
+/* 'margin-left' e 'margin-right' foram ambas definidas como 'auto' para manter o conteúdo no centro da página e manter a organização responsiva.*/
+
+.introducao-conteudo {
+  align-self: end;
+  padding-bottom: 200px;
+}
+
+.introducao img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.introducao h1 {
+  margin-bottom: 32px;
+  
+}
+
+/* No FIGMA, quando a font-size for 64px, o line-height será 72px, porém caso o font-size seja alterado, você deverá manualmente alterar o line-heigt, para facilitar isso, colocamos 1.125 (64 x 1.125 = 72). Atenção: essa estratégia será aplicada ao decorrer do código. */
+
+
+.introducao p {
+  margin-bottom: 20px; 
+}
+
+
+/* Responsivo */
+@media (max-width: 800px) {
+  .introducao-bg {
+    background: var(--cor-11);
+    padding-top: 40px;
+    box-shadow: inset 0 -60px var(--cor-0);
+  }
+  
+  .introducao {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .introducao-conteudo {
+    padding-bottom: 0px;
+  }
+
+  .introducao h1 {
+    margin-bottom: 16px;
+  }
+
+  .introducao img {
+    height: 300px;
+    width: 100%;
+  }
+}
